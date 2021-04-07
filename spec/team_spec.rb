@@ -14,7 +14,6 @@ RSpec.describe do
     roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
     sam = Player.new({name: "Sam Obisanya", position: "Right-back Defender", salary: 600_000})
     richmond = Team.new("AFC Richmond", "Ted Lasso", [roy, sam])
-
     expect(richmond.name).to eq("AFC Richmond")
   end
 
@@ -33,16 +32,12 @@ RSpec.describe do
 
     expect(richmond.players).to eq([roy, sam])
   end
-end
 
-# pry(main)> richmond.players
-# # => [#<Player:0x00007f8327213de0...>, #<Player:0x00007f8326ab57d8...>]
-#
-# pry(main)> richmond.total_salary
-# # => 1600000
-#
-# pry(main)> richmond.captain
-# # => "Roy Kent"
-#
-# pry(main)> richmond.positions_filled
-# # => ["Center Midfielder", "Right-back Defender"]
+  xit 'has total team salary' do
+    roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
+    sam = Player.new({name: "Sam Obisanya", position: "Right-back Defender", salary: 600_000})
+    richmond = Team.new("AFC Richmond", "Ted Lasso", [roy, sam])
+
+    expect(richmond.total_salary).to eq(1600000)
+  end
+end
