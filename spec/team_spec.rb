@@ -25,11 +25,16 @@ RSpec.describe do
 
     expect(richmond.coach).to eq("Ted Lasso")
   end
+
+  it 'has players' do
+    roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
+    sam = Player.new({name: "Sam Obisanya", position: "Right-back Defender", salary: 600_000})
+    richmond = Team.new("AFC Richmond", "Ted Lasso", [roy, sam])
+
+    expect(richmond.players).to eq([roy, sam])
+  end
 end
 
-# pry(main)> richmond.coach
-# # => "Ted Lasso"
-#
 # pry(main)> richmond.players
 # # => [#<Player:0x00007f8327213de0...>, #<Player:0x00007f8326ab57d8...>]
 #
