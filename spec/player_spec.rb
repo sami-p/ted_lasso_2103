@@ -15,7 +15,9 @@ RSpec.describe Player do
     roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
     expect(roy.position).to eq("Center Midfielder")
   end
-end
 
-# pry(main)> roy.salary
-# # => 1000000
+  it 'has a salary' do
+    roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
+    expect(roy.salary).to eq(1000000)
+  end
+end
