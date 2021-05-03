@@ -16,4 +16,10 @@ class Team
     end
     total
   end
+
+  def captain
+    @players.max_by do |player|
+      player.salary
+    end.name
+  end
 end
