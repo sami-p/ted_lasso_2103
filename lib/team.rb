@@ -26,6 +26,6 @@ class Team
   def positions_filled
     @players.map do |player|
       player.position
-    end 
+    end
   end
 end
