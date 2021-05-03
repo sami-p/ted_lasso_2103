@@ -22,4 +22,10 @@ class Team
       player.salary
     end.name
   end
+
+  def positions_filled
+    @players.map do |player|
+      player.position
+    end 
+  end
 end
