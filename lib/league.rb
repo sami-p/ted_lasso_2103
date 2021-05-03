@@ -10,4 +10,12 @@ class League
   def add_team(team)
     @teams << team
   end
+
+  def captains
+    caps = []
+    @teams.map do |team|
+      caps << team.captain
+    end
+    caps
+  end
 end
