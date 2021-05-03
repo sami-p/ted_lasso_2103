@@ -1,5 +1,5 @@
 class Team
 
-  def initialize
-  end 
+  def initialize(name, coach, players)
+  end
 end
