@@ -11,5 +11,13 @@ RSpec.describe Team do
 
       expect(richmond).to be_an_instance_of(Team)
     end
+
+    it 'has a name' do
+      roy = Player.new({name: "Roy Kent", position: "Center Midfielder" , salary: 1_000_000})
+      sam = Player.new({name: "Sam Obisanya", position: "Right-back Defender", salary: 600_000})
+      richmond = Team.new("AFC Richmond", "Ted Lasso", [roy, sam])
+
+      expect(richmond.name).to eq("AFC Richmond")
+    end
   end
 end
