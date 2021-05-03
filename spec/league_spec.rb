@@ -10,5 +10,11 @@ RSpec.describe League do
 
       expect(premier).to be_an_instance_of(League)
     end
+
+    it 'has a name' do
+      premier = League.new("Premier League")
+
+      expect(premier.name).to eq("Premier League")
+    end
   end
 end
