@@ -117,16 +117,16 @@ pry(main)> premier.add_team(richmond)
 pry(main)> premier.add_team(manchester)
 
 pry(main)> premier.teams
-# => [#<Team:0x00007f83280b3288...>,#<Team:0x00007fe5f88b0a20...>]
+=> [#<Team:0x00007f83280b3288...>,#<Team:0x00007fe5f88b0a20...>]
 
 pry(main)> premier.captains
 # => [#<Player:0x00007f98a4ba8dc8...>,#<Player:0x00007fe5f8172a60...>]
 
 pry(main)> premier.players_by_team
-# => {
-      #<Team:0x00007f83280b3288...> => ["Roy Kent", "Sam Obisanya"],
-      #<Team:0x00007fe5f88b0a20...> => ["Jamie Tartt", "Fernandinho"]
-#    }
+=> {
+      <Team:0x00007f83280b3288...> => ["Roy Kent", "Sam Obisanya"],
+      <Team:0x00007fe5f88b0a20...> => ["Jamie Tartt", "Fernandinho"]
+   }
 ```
 
 ## Iteration 4

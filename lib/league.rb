@@ -18,4 +18,12 @@ class League
     end
     caps
   end
+
+  def players_by_team
+    hash = Hash.new
+    teams.each do |team|
+      hash[team] = team.players.map { |player| player.name }
+    end
+    hash
+  end
 end
